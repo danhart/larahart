@@ -1,0 +1,35 @@
+server {
+  listen 80;
+  server_name  <%= node[:hostname] %>;
+
+  access_log  <%= node[:nginx][:log_dir] %>/localhost.access.log;
+
+  root   <%= @node[:vagrant][:directory] %>;
+  index  index.php index.html index.htm;
+
+  try_files $uri $uri/ /index.php?q=$uri&$args;
+
+  location /blog/ {
+    try_files $uri $uri/ /blog/index.php?q=$uri&$args;
+  }
+
+  # serve static files directly
+  location ~* \.(jpg|jpeg|gif|css|png|js|ico|html|mp3|wav|swf|zip|pdf|htc|flv|f4v|mov|mp4|wmv|avi|mpg)$ {
+    access_log off;
+    expires max;
+    add_header Cache-Control public;
+  }
+
+  # Pass to php
+  location ~ \.php$ {
+    include fastcgi_params;
+    fastcgi_index index.php;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    fastcgi_pass unix:/tmp/php.socket;
+  }
+
+  location ~ /\.ht {
+    deny  all;
+  }
+
+}
