@@ -4,8 +4,8 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package Change_Me
- * @since Change_Me 0.1
+ * @package Lara_Hart
+ * @since Lara_Hart 0.1
  */
 ?><!DOCTYPE html>
 <!--[if IE 6]>
@@ -41,7 +41,7 @@
 
   // Add a page number if necessary:
   if ( $paged >= 2 || $page >= 2 )
-    echo ' | ' . sprintf( __( 'Page %s', 'changeme' ), max( $paged, $page ) );
+    echo ' | ' . sprintf( __( 'Page %s', 'larahart' ), max( $paged, $page ) );
 
   ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -49,9 +49,6 @@
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_directory' ); ?>/main.css" />
     <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    <!--[if lt IE 9]>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-    <![endif]-->
 
     <?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>
@@ -73,13 +70,7 @@
           </h1>
           <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
         </hgroup>
-          <div class="blog-search">
-            <?php get_search_form(); ?>
-          </div>
         <nav id="access" role="navigation">
-          <h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'changeme' ); ?></h1>
-          <div class="skip-link screen-reader-text"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'changeme' ); ?>"><?php _e( 'Skip to content', 'changeme' ); ?></a></div>
-
           <?php wp_nav_menu( array(
             'theme_location' => 'primary'
           ) ); ?>
