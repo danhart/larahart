@@ -133,6 +133,26 @@ body {
   em {
     font-style: italic;
   }
+  form {
+    overflow: hidden;
+  }
+  span.wpcf7-not-valid-tip {
+    top: 0;
+    left: 255px;
+    width: auto;
+    border: none;
+    color: red;
+  }
+  .your-message span.wpcf7-not-valid-tip {
+    left: 357px;
+  }
+  span.wpcf7-form-control-wrap {
+    display: block;
+  }
+  div.wpcf7-response-output {
+    font-weight: bold;
+    margin: 0;
+  }
 }
 
 #colophon {
@@ -224,11 +244,6 @@ a:active, a:focus, button:active, button:focus {
   outline: none;
   -moz-outline-style: none;
 }
-
-input[type=submit]:hover, button:hover {
-  .opacity(0.9);
-}
-
 
 /* Paragraphs */
 p {
@@ -351,4 +366,82 @@ html[xmlns] .clearfix {
 #leftimage {
 	margin: 0 25px 25px 0px;
 	float: left;
+}
+
+/* Form CSS */
+
+#content {
+  form {
+    input {
+      .rounded-corners(0.4em);
+      background: none repeat scroll 0 0 #FAFAFA;
+      border: 1px solid #DDDDDD;
+      font: 0.95em arial,sans-serif;
+      padding: 3px;
+      width: 213px;
+    }
+    .submit input {
+      width: auto;
+      padding: 5px 15px;
+      font-weight: bold;
+      font-size: 12px;
+      background-color: #526EC8;
+      color: #FFF;
+      cursor: pointer;
+      &:hover {
+        background-color: #526EC8;
+      }
+    }
+    input:hover, input:focus {
+      background:none repeat scroll 0 0 #F6F6F6;
+      border-color:#C5C5C5;
+    }
+    textarea {
+      .rounded-corners(0.4em);
+      background:none repeat scroll 0 0 #FAFAFA;
+      border:1px solid #DDDDDD;
+      font:0.95em arial,sans-serif;
+      padding:0.15em;
+    }
+
+    textarea:hover, textarea:focus {
+      background:none repeat scroll 0 0 #F6F6F6;
+      border-color:#C5C5C5;
+    }
+    select {
+      .rounded-corners(0.4em);
+      background:none repeat scroll 0 0 #FAFAFA;
+      border:1px solid #DDDDDD;
+      font:bold 0.95em arial,sans-serif;
+      padding:0.15em;
+      width:109px;
+    }
+    select:hover, select:focus {
+      background:none repeat scroll 0 0 #F6F6F6;
+      border-color:#C5C5C5;
+    }
+    option {
+      background:none repeat scroll 0 0 #F6F6F6;
+      margin:3px 3px 2px;
+      padding:0;
+    }
+    label {
+      float:left;
+      margin-right:1em;
+      text-align:right;
+      width:10em;
+    }
+    legend {
+      color: #526ec8;
+      font-size: 1.2em;
+    }
+    fieldset {
+      border:1px solid #DDDDDD;
+      padding:4px 0.5em 0.5em;
+    }
+    fieldset div {
+      clear:both;
+      margin:0.3em 0;
+    }
+  }
 }
