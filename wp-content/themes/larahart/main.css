@@ -10,8 +10,7 @@ body{background-image:url(images/chosenspiral.png);background-position:left top;
 #content strong{font-weight:bold;}
 #content em{font-style:italic;}
 #content form{overflow:hidden;}
-#content span.wpcf7-not-valid-tip{top:0;left:255px;width:auto;border:none;color:red;}
-#content .your-message span.wpcf7-not-valid-tip{left:357px;}
+#content span.wpcf7-not-valid-tip{top:0;left:357px;width:auto;border:none;color:red;}
 #content span.wpcf7-form-control-wrap{display:block;}
 #content div.wpcf7-response-output{font-weight:bold;margin:0;}
 #colophon{background-image:url(images/roundedcorners.png);background-repeat:no-repeat;height:22px;}
