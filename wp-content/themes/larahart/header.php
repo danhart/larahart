@@ -58,24 +58,22 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/application.js" type="text/javascript"></script>
   </head>
 
-  <body <?php body_class(); ?>>
+  <body <?php body_class(); ?> <?php body_id(); ?>>
     <div id="page" class="hfeed">
     <?php do_action( 'before' ); ?>
-      <header id="branding" role="banner">
-        <hgroup>
+      <div id="header">
           <h1 id="site-title">
             <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
               <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>
             </a>
           </h1>
           <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-        </hgroup>
-        <nav id="access" role="navigation">
+        <div id="nav">
           <?php wp_nav_menu( array(
             'theme_location' => 'primary'
           ) ); ?>
 
-        </nav><!-- #access -->
-      </header><!-- #branding -->
+        </div><!-- #access -->
+      </div><!-- #branding -->
 
       <div id="main">

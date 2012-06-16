@@ -106,3 +106,38 @@ if ( ! function_exists( 'larahart_google_analytics' ) ) :
 endif;
 
 add_action('wp_head', 'larahart_google_analytics');
+
+/**
+ * Change the currently active page class
+ */
+add_filter('nav_menu_css_class', 'special_nav_class', 10, 2);
+function special_nav_class($classes, $item){
+  if($item->current) $classes[] = "active";
+  return $classes;
+}
+
+if ( ! function_exists( 'body_id' ) ) :
+  /**
+   * Adds a body ID dependant on which page or page type is
+   * currently being viewed
+   *
+   * @since Build_A_Business 1.0
+   */
+  function body_id() {
+    if (is_page()) {
+      $id = get_query_var('name');
+    } elseif (is_single()) {
+      $id = 'single';
+    } elseif (is_category()) {
+      $id = single_cat_title();
+    } elseif (is_archive()) {
+      $id = 'archive';
+    } elseif (is_home()) {
+      $id = 'updates';
+    } else {
+      $id = '';
+    }
+
+    echo 'id="' . $id . '"';
+  }
+endif;

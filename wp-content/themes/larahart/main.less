@@ -1,15 +1,11 @@
 /* =Less Variables 
 -------------------------------------------------------------- */
-@primaryTextColor: #434343;
-@secondaryTextColor: #555;
+@primaryTextColor: #35393C;
+@secondaryTextColor: #526EC8;
 
-@primaryFontFamily: "HelveticaNeue",Arial,sans-serif;
+@primaryFontFamily: Arial, Helvetica, sans-serif;
 
-@primaryLinkColor: #129cb2;
-@secondaryLinkColor: #00abc7;
-
-@primaryBorderColor: #999;
-@secondaryBorderColor: #DDD;
+@primaryLinkColor: #526EC8;
 
 /* =Less Mixins
 -------------------------------------------------------------- */
@@ -80,31 +76,59 @@
 /* =Structure
 -------------------------------------------------------------- */
 html, body {
-  background-color: #D7D2CB;
+  background-color: #FFF;
   font-family: @primaryFontFamily;
   color: @primaryTextColor;
   height: 100%;
-  font-size: 13px;
-  line-height: 17px;
+  font-size: 12px;
+  line-height: 18px;
+	background-image: url(images/purplebasefade.jpg);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+}
+
+#spiral {
+	background-image: url(images/chosenspiral.png);
+	background-position: left top;
+	background-repeat: no-repeat;
 }
 
 #page {
-}
-
-#primary {
+	padding: 0px 12px 0px 12px;
+	background-image: url(images/contentshadow.png);
+	background-repeat: no-repeat;
+	margin: auto auto;
+	width: 850px;
+	margin-bottom: 25px;
 }
 
 #content {
+	min-height: 327px;
+	height: auto !important;
+	height: 327px;
+	background-image: url(images/contenttransblock.png);
+	background-repeat: repeat;
+	padding: 25px 25px 0px 25px;
+  ul {
+    list-style-type: disc;
+    list-style-image: url(images/bulletp.png);
+    list-style-position: outside;
+    margin-left: 0;
+    margin-top: 5px;
+    padding-left: 22px;
+  }
+  ul.laralistcolumns {
+    float: left;
+    margin-right: 30px;
+  }
 }
 
-#main #main-sidebar {
-  float: right;
-  overflow: hidden;
-  width: 233px;
-}
 #colophon {
   clear: both;
-  display: block;
+	background-image: url(images/roundedcorners.png);
+	background-repeat: no-repeat;
+	height: 22px;
 }
 
 .col-left {
@@ -141,32 +165,25 @@ html, body {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
   color: @secondaryTextColor;
   line-height: 1.2;
+  font-weight: normal;
   a {
     color: @secondaryTextColor;
   }
   a:hover {
-    color: @secondaryLinkColor;
+    color: @secondaryTextColor;
   }
 }
 
 h1 {
-  font-size: 32px;
-  line-height: 36px;
 }
 
 h2 {
-  font-family: Georgia,serif;
-  font-size: 18px;
-  letter-spacing: 1px;
+  font-size: 15px;
 }
 
 h3 {
-  font-size: 15px;
-  font-weight: normal;
-  color: @primaryTextColor;
 }
 
 h4 {
@@ -186,6 +203,7 @@ a {
 
 a:hover {
   color: @primaryLinkColor;
+  text-decoration: underline;
 }
 
 a:active, a:focus, button:active, button:focus {
@@ -200,7 +218,7 @@ input[type=submit]:hover, button:hover {
 
 /* Paragraphs */
 p {
-  margin-bottom: 17px;
+  margin-bottom: 18px;
 }
 
 p:last-child {
@@ -233,4 +251,83 @@ html[xmlns] .clearfix {
   height: 1%;
 }
 
+#header {
+	height: 137px;
+}
 
+#nav {
+	height: 31px;
+}
+
+#mainbanner {
+	height: 147px;
+	background-repeat: no-repeat;
+  .homepagebanner {
+    background-image: url(images/homepagebanner.jpg);
+  }
+  .aboutmebanner {
+    background-image: url(images/aboutmebanner.jpg);
+  }
+  .counsellingbanner {
+    background-image: url(images/counsellingbanner.jpg);
+  }
+  .gestaltbanner {
+    background-image: url(images/gestaltbanner.jpg);
+  }
+  .contactbanner {
+    background-image: url(images/contactbanner.jpg);
+  }
+}
+
+#logo {
+	float: right;
+	margin: 65px 36px 0px 0px;
+}
+
+#nav ul {
+	list-style: none;
+}
+
+#nav li {
+	display: inline;
+	list-style-type: none;
+}
+
+#nav li a {
+	/* height: 31px; */
+	font-weight: bold;
+	color: #35393C;
+	float: left;
+	padding: 7px 10px 6px 10px;
+}
+
+#nav li a:hover {
+	color: #FFFFFF;
+	/* background-color: #ba86d8; */
+	background-image: url(images/navhoverbg3.png);
+	text-decoration: none;
+}
+
+#nav li a.active {
+	color: #9f42d4;
+}
+
+#nav li a.active:hover {
+	color: #FFFFFF;
+}
+
+#rightimage {
+	background-repeat: no-repeat;
+	margin: 0 0 25px 25px;
+	width: 185px;
+	height: 327px;
+	float: right;
+}
+
+#leftimage {
+	background-repeat: no-repeat;
+	margin: 0 25px 25px 0px;
+	width: 185px;
+	height: 327px;
+	float: left;
+}
