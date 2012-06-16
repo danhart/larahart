@@ -1,9 +1,17 @@
+@font-face{
+	font-family: 'HelveticaNeue';
+	src: url('fonts/helveticaneue-webfont.eot');
+	src: local('☺'), url('fonts/helveticaneue-webfont.woff') format('woff'), url('fonts/helveticaneue-webfont.ttf') format('truetype'), url('fonts/helveticaneue-webfont.svg#webfontIi7aIQmf') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* =Less Variables 
 -------------------------------------------------------------- */
 @primaryTextColor: #35393C;
 @secondaryTextColor: #526EC8;
 
-@primaryFontFamily: Arial, Helvetica, sans-serif;
+@primaryFontFamily: "Helvetica Neue","HelveticaNeue",Arial,sans-serif;
 
 @primaryLinkColor: #526EC8;
 
@@ -83,6 +91,7 @@ html, body {
   color: @primaryTextColor;
   font-size: 12px;
   line-height: 18px;
+  min-height: 100%;
 }
 
 html {

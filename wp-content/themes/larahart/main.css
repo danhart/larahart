@@ -1,6 +1,6 @@
-.link-hide-text{overflow:hidden;text-indent:-9999px;background-repeat:no-repeat;cursor:pointer;}
+@font-face{font-family:'HelveticaNeue';src:url('fonts/helveticaneue-webfont.eot');src:local('☺'),url('fonts/helveticaneue-webfont.woff') format('woff'),url('fonts/helveticaneue-webfont.ttf') format('truetype'),url('fonts/helveticaneue-webfont.svg#webfontIi7aIQmf') format('svg');font-weight:normal;font-style:normal;}.link-hide-text{overflow:hidden;text-indent:-9999px;background-repeat:no-repeat;cursor:pointer;}
 .button-hide-text{text-indent:-9999px;display:block;font-size:0;line-height:0;background-color:transparent;border:0px solid #FFFFFF;overflow:hidden;cursor:pointer;}
-html,body{font-family:Arial,Helvetica,sans-serif;color:#35393c;font-size:12px;line-height:18px;}
+html,body{font-family:"Helvetica Neue","HelveticaNeue",Arial,sans-serif;color:#35393c;font-size:12px;line-height:18px;min-height:100%;}
 html{background-color:#FFF;background:-webkit-gradient(linear, left bottom, left top, from(#cdb7de), to(#ffffff 35%));background:-webkit-linear-gradient(bottom, #cdb7de, #ffffff 35%);background:-moz-linear-gradient(top, #cdb7de, #ffffff 35%);background:-ms-linear-gradient(top, #cdb7de, #ffffff 35%);background:-o-linear-gradient(top, #cdb7de, #ffffff 35%);background:linear-gradient(top, #cdb7de, #ffffff 35%);}
 body{background-image:url(images/chosenspiral.png);background-position:left top;background-repeat:no-repeat;background-attachment:fixed;}
 #page{padding:0px 12px 0px 12px;background-image:url(images/contentshadow.png);background-repeat:no-repeat;margin:0 0 0 98px;width:826px;margin-bottom:25px;background-position:0 137px;}
