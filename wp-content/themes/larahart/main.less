@@ -57,10 +57,10 @@
 .linear-gradient(@start: top, @end: bottom, @from, @to) {
   background: -webkit-gradient(linear, left @start, left @end, from(@from), to(@to));
   background: -webkit-linear-gradient(@start, @from, @to);
-  background: -moz-linear-gradient(@end, @from, @to);
-  background: -ms-linear-gradient(@end, @from, @to);
-  background: -o-linear-gradient(@end, @from, @to);
-  background: linear-gradient(@end, @from, @to);
+  background: -moz-linear-gradient(@start, @from, @to);
+  background: -ms-linear-gradient(@start, @from, @to);
+  background: -o-linear-gradient(@start, @from, @to);
+  background: linear-gradient(@start, @from, @to);
   // TODO: Fix this filter to work with LESS
   // filter: ~`"progid:DXImageTransform.Microsoft.gradient( startColorstr='@{from}', endColorstr='@{to}', GradientType=0)"`;
 }
