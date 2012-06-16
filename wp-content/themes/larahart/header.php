@@ -62,18 +62,17 @@
     <div id="page" class="hfeed">
     <?php do_action( 'before' ); ?>
       <div id="header">
-          <h1 id="site-title">
+          <h1 id="logo">
             <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-              <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>
+              <img src="<?php bloginfo('template_directory'); ?>/images/laralogo.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?> - <?php esc_attr( bloginfo( 'description' ) ); ?>" />
             </a>
           </h1>
-          <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
         <div id="nav">
           <?php wp_nav_menu( array(
             'theme_location' => 'primary'
           ) ); ?>
 
-        </div><!-- #access -->
-      </div><!-- #branding -->
-
-      <div id="main">
+        </div>
+      </div>
+      <div id="mainbanner"></div>
+      <div id="content">

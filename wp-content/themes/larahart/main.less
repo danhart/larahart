@@ -46,10 +46,13 @@
   opacity: @opacity;
 }
 
-.linear-gradient(@from, @to) {
-  background: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
-  background: -webkit-linear-gradient(top, @from, @to);
-  background: -moz-linear-gradient(top, @from, @to);
+.linear-gradient(@start: top, @end: bottom, @from, @to) {
+  background: -webkit-gradient(linear, left @start, left @end, from(@from), to(@to));
+  background: -webkit-linear-gradient(@start, @from, @to);
+  background: -moz-linear-gradient(@end, @from, @to);
+  background: -ms-linear-gradient(@end, @from, @to);
+  background: -o-linear-gradient(@end, @from, @to);
+  background: linear-gradient(@end, @from, @to);
   // TODO: Fix this filter to work with LESS
   // filter: ~`"progid:DXImageTransform.Microsoft.gradient( startColorstr='@{from}', endColorstr='@{to}', GradientType=0)"`;
 }
@@ -76,19 +79,18 @@
 /* =Structure
 -------------------------------------------------------------- */
 html, body {
-  background-color: #FFF;
   font-family: @primaryFontFamily;
   color: @primaryTextColor;
-  height: 100%;
   font-size: 12px;
   line-height: 18px;
-	background-image: url(images/purplebasefade.jpg);
-	background-position: left bottom;
-	background-repeat: repeat-x;
-	background-attachment: fixed;
 }
 
-#spiral {
+html {
+  background-color: #FFF;
+  .linear-gradient(bottom, top, #cdb7de, white 35%);
+}
+
+body {
 	background-image: url(images/chosenspiral.png);
 	background-position: left top;
 	background-repeat: no-repeat;
@@ -99,8 +101,9 @@ html, body {
 	background-image: url(images/contentshadow.png);
 	background-repeat: no-repeat;
 	margin: auto auto;
-	width: 850px;
+	width: 826px;
 	margin-bottom: 25px;
+  background-position: 0 137px;
 }
 
 #content {
@@ -252,36 +255,41 @@ html[xmlns] .clearfix {
 }
 
 #header {
-	height: 137px;
 }
 
 #nav {
 	height: 31px;
+  clear: both;
 }
 
 #mainbanner {
 	height: 147px;
 	background-repeat: no-repeat;
-  .homepagebanner {
-    background-image: url(images/homepagebanner.jpg);
-  }
-  .aboutmebanner {
-    background-image: url(images/aboutmebanner.jpg);
-  }
-  .counsellingbanner {
-    background-image: url(images/counsellingbanner.jpg);
-  }
-  .gestaltbanner {
-    background-image: url(images/gestaltbanner.jpg);
-  }
-  .contactbanner {
-    background-image: url(images/contactbanner.jpg);
-  }
 }
 
+#home #mainbanner {
+  background-image: url(images/homepagebanner.jpg);
+}
+
+#about-me #mainbanner {
+  background-image: url(images/aboutmebanner.jpg);
+}
+
+#contact-details #mainbanner {
+  background-image: url(images/contactbanner.jpg);
+}
+
+#counselling #mainbanner {
+  background-image: url(images/counsellingbanner.jpg);
+}
+
+#gestalt-approach #mainbanner {
+  background-image: url(images/gestaltbanner.jpg);
+}
+  
 #logo {
 	float: right;
-	margin: 65px 36px 0px 0px;
+	margin: 65px 24px 21px 0px;
 }
 
 #nav ul {
@@ -308,11 +316,11 @@ html[xmlns] .clearfix {
 	text-decoration: none;
 }
 
-#nav li a.active {
+#nav li.current_page_item a {
 	color: #9f42d4;
 }
 
-#nav li a.active:hover {
+#nav li.current_page_item a:hover {
 	color: #FFFFFF;
 }
 

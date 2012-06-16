@@ -9,11 +9,8 @@
  */
 ?>
 
-    </div><!-- #main -->
-
-    <footer id="colophon" role="contentinfo">
-
-    </footer><!-- #colophon -->
+    </div><!-- #content -->
+    <div id="colophon" role="contentinfo"></div>
   </div><!-- #page -->
 
   <?php wp_footer(); ?>
