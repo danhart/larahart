@@ -10,12 +10,12 @@ Template Name: Right-side Image
 
 get_header(); ?>
 
+<div id="rightimage"><?php the_post_thumbnail('aside-image'); ?></div>
+
 <?php while ( have_posts() ) : the_post(); ?>
 
 <?php get_template_part( 'content' ); ?>
 
 <?php endwhile; // end of the loop. ?>
-
-<?php the_post_thumbnail('aside-image'); ?>
 
 <?php get_footer(); ?>

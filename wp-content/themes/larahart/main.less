@@ -114,21 +114,28 @@ body {
 	background-repeat: repeat;
 	padding: 25px 25px 0px 25px;
   ul {
-    list-style-type: disc;
-    list-style-image: url(images/bulletp.png);
-    list-style-position: outside;
-    margin-left: 0;
-    margin-top: 5px;
-    padding-left: 22px;
+    margin-top: -13px;
+    margin-bottom: 18px;
   }
-  ul.laralistcolumns {
+  li {
+    background-image: url(images/bulletp.png);
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    background-position: 0 3px;
+  }
+  ul.column {
     float: left;
     margin-right: 30px;
+  }
+  strong {
+    font-weight: bold;
+  }
+  em {
+    font-style: italic;
   }
 }
 
 #colophon {
-  clear: both;
 	background-image: url(images/roundedcorners.png);
 	background-repeat: no-repeat;
 	height: 22px;
@@ -180,10 +187,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-size: 20px;
+  margin-bottom: 0.3em;
 }
 
 h2 {
   font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
 }
 
 h3 {
@@ -287,9 +298,12 @@ html[xmlns] .clearfix {
   background-image: url(images/gestaltbanner.jpg);
 }
   
-#logo {
+#header #logo {
 	float: right;
-	margin: 65px 24px 21px 0px;
+	margin: 65px 24px 24px 0px;
+  img {
+    display: block;
+  }
 }
 
 #nav ul {
@@ -324,18 +338,17 @@ html[xmlns] .clearfix {
 	color: #FFFFFF;
 }
 
+#rightimage, #leftimage {
+  width: 185px;
+  height: 327px;
+}
+
 #rightimage {
-	background-repeat: no-repeat;
 	margin: 0 0 25px 25px;
-	width: 185px;
-	height: 327px;
 	float: right;
 }
 
 #leftimage {
-	background-repeat: no-repeat;
 	margin: 0 25px 25px 0px;
-	width: 185px;
-	height: 327px;
 	float: left;
 }

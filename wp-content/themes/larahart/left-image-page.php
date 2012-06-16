@@ -10,7 +10,7 @@ Template Name: Left-side Image
 
 get_header(); ?>
 
-<?php the_post_thumbnail('aside-image'); ?>
+<div id="leftimage"><?php the_post_thumbnail('aside-image'); ?></div>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
